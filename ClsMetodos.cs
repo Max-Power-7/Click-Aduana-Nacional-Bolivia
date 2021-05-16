@@ -16,13 +16,18 @@ namespace Aduana_Nacional
         public ChromeOptions chromeOptions = new ChromeOptions();
         public ChromeDriverService chromeDriverService;
         public ChromeDriver driver;
+        
         public ClsMetodos()
         {
             this.url = "http://anbsw01.aduana.gob.bo:7601/click/login.do";
-            this.chromeOptions.AddArguments(new List<string>() { "headless" });
+            //this.chromeOptions.AddArguments(new List<string>() { "headless" });
+            this.chromeOptions.AddArguments(new List<string>() { "no-sandbox" });
+            //this.chromeOptions.AddArguments(new List<string>() { "use-gl=desktop" });
+            //--enable - webgl            
             this.chromeDriverService = ChromeDriverService.CreateDefaultService();
-            this.driver = new ChromeDriver(chromeDriverService, chromeOptions);
-        }
+            this.driver = new ChromeDriver(chromeDriverService, chromeOptions/*, TimeSpan.FromMinutes(3)*/);
+            //driver.Manage().Timeouts().PageLoad.Add(System.TimeSpan.FromSeconds(30));
+        }   
 
         public void Conectar()
         {

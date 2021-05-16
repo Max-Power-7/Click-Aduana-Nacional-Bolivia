@@ -41,7 +41,7 @@ namespace Aduana_Nacional
             this.cbxAduana = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnConsult = new System.Windows.Forms.Button();
+            this.btnEnviarDatos = new System.Windows.Forms.Button();
             this.panFecha = new System.Windows.Forms.Panel();
             this.labFecha = new System.Windows.Forms.Label();
             this.panID = new System.Windows.Forms.Panel();
@@ -49,7 +49,8 @@ namespace Aduana_Nacional
             this.panDato = new System.Windows.Forms.Panel();
             this.labDato = new System.Windows.Forms.Label();
             this.picLogo = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnConsultar = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panFecha.SuspendLayout();
@@ -187,15 +188,15 @@ namespace Aduana_Nacional
             this.label2.TabIndex = 3;
             this.label2.Text = "Número de Registro";
             // 
-            // btnConsult
+            // btnEnviarDatos
             // 
-            this.btnConsult.Location = new System.Drawing.Point(177, 311);
-            this.btnConsult.Name = "btnConsult";
-            this.btnConsult.Size = new System.Drawing.Size(75, 23);
-            this.btnConsult.TabIndex = 4;
-            this.btnConsult.Text = "Consultar";
-            this.btnConsult.UseVisualStyleBackColor = true;
-            this.btnConsult.Click += new System.EventHandler(this.btnConsult_Click);
+            this.btnEnviarDatos.Location = new System.Drawing.Point(177, 311);
+            this.btnEnviarDatos.Name = "btnEnviarDatos";
+            this.btnEnviarDatos.Size = new System.Drawing.Size(92, 23);
+            this.btnEnviarDatos.TabIndex = 4;
+            this.btnEnviarDatos.Text = "Enviar Datos";
+            this.btnEnviarDatos.UseVisualStyleBackColor = true;
+            this.btnEnviarDatos.Click += new System.EventHandler(this.btnEnviarDatos_Click);
             // 
             // panFecha
             // 
@@ -265,15 +266,25 @@ namespace Aduana_Nacional
             this.picLogo.TabIndex = 6;
             this.picLogo.TabStop = false;
             // 
-            // button1
+            // btnConsultar
             // 
-            this.button1.Location = new System.Drawing.Point(568, 311);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Testear";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnConsultar.Location = new System.Drawing.Point(275, 311);
+            this.btnConsultar.Name = "btnConsultar";
+            this.btnConsultar.Size = new System.Drawing.Size(75, 23);
+            this.btnConsultar.TabIndex = 4;
+            this.btnConsultar.Text = "Consultar";
+            this.btnConsultar.UseVisualStyleBackColor = true;
+            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.Location = new System.Drawing.Point(361, 311);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(75, 23);
+            this.btnSalir.TabIndex = 4;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // FrmAduanaNacional
             // 
@@ -281,12 +292,13 @@ namespace Aduana_Nacional
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
             this.ClientSize = new System.Drawing.Size(823, 433);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.picLogo);
             this.Controls.Add(this.panDato);
             this.Controls.Add(this.panID);
             this.Controls.Add(this.panFecha);
-            this.Controls.Add(this.btnConsult);
+            this.Controls.Add(this.btnSalir);
+            this.Controls.Add(this.btnConsultar);
+            this.Controls.Add(this.btnEnviarDatos);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
@@ -322,7 +334,7 @@ namespace Aduana_Nacional
         private System.Windows.Forms.ComboBox cbxGestion;
         private System.Windows.Forms.TextBox txtSerie;
         private System.Windows.Forms.ComboBox cbxAduana;
-        private System.Windows.Forms.Button btnConsult;
+        private System.Windows.Forms.Button btnEnviarDatos;
         private System.Windows.Forms.ComboBox cbxNum;
         private System.Windows.Forms.Panel panFecha;
         private System.Windows.Forms.Panel panID;
@@ -331,7 +343,8 @@ namespace Aduana_Nacional
         private System.Windows.Forms.Label labFecha;
         private System.Windows.Forms.Label labID;
         private System.Windows.Forms.Label labDato;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnConsultar;
+        private System.Windows.Forms.Button btnSalir;
     }
 }
 
